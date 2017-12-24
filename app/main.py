@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -10,11 +10,20 @@ def fibcalc(arg):
        z.append(a)
     return z
 
-@app.route('/fib/<int:m>')
+
+@app.route("/")
+def main():
+  return render_template('index.html')
+
+@app.route('/v1/fib/<int:m>')
 def fib(m):
     y = int(m)
     ftmp = fibcalc(y)
     return str(ftmp)
+
+@app.errorhandler(404)
+def page_not_found(e):
+        return render_template('404.html'), 404
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
