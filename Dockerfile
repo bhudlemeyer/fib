@@ -1,7 +1,7 @@
 
 FROM tiangolo/uwsgi-nginx-flask:python3.6
 
-ARG PORT
+ARG PORT=8080
 ENV LISTEN_PORT $PORT
 
 EXPOSE $PORT
