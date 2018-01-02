@@ -1,2 +1,2 @@
-####
-Init Read Me
+# Brandon Fibonacci project
+
