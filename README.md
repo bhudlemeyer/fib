@@ -5,7 +5,7 @@
 Clone this github repository to your machine, and ensure you have python version 3 or above installed.
  Then run the following command from inside the git directory to install required python packages.
 ```
-pip3* install -r requirements.txt
+pip3 install -r requirements.txt
 
 ``` 
 *for purposes of this readme it will be assumed you need to add 3 to the end of python and pip commands to utilize pythonv3*
@@ -50,6 +50,12 @@ To go directly to the api endpoint simply curl or open the following endpoint in
 
 ```
 http://hostip:port/v1/fib/(Positive_Number)
+
+for example
+
+curl http://10.0.5.11:8081/v1/fib/5
+returns
+[0, 1, 1, 2, 3, 5]
 ```
 
 
