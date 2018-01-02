@@ -29,5 +29,29 @@ sudo docker build -t NAME_YOU_WANT_FOR_IMAGE --build-arg port=PORT_YOU_WANT_APP_
 ```
 If you do not add the --build-arg port= the port will default to 8080.
 
+### run the following command to start the newly created docker image on your local machine
+
+```
+sudo docker run -d --name NAME_YOU_WANT_FOR_CONTAINER -p localport:PORT_YOU_CONFIGURED_IN_BUILD_PROCESS IMAGENAME
+```
+
+## Using the app
+
+To access the app no matter which way you brought it up simply navigate to the following url
+
+```
+http://hostip:port/
+```
+
+This will drop you at the welcome screen with usage information for the app it self.
+
+
+To go directly to the api endpoint simply curl or open the following endpoint in a browser
+
+```
+http://hostip:port/v1/fib/(Positive_Number)
+```
+
+
 
 
