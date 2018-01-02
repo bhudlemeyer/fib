@@ -24,10 +24,10 @@ ensure docker is installed and running on your machine
 
 run following command to build the docker image
 ```
-sudo docker build -t NAME_YOU_WANT_FOR_IMAGE --build-arg port=PORT_YOU_WANT_APP_TO_LISTEN_ON .
+sudo docker build -t NAME_YOU_WANT_FOR_IMAGE --build-arg PORT=PORT_YOU_WANT_APP_TO_LISTEN_ON .
 
 ```
-If you do not add the --build-arg port= the port will default to 8080.
+If you do not add the --build-arg PORT= the port will default to 8080.
 
 ### run the following command to start the newly created docker image on your local machine
 
