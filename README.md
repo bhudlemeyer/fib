@@ -2,13 +2,13 @@
 
 ## Running locally with python
 
-Clone this github repository to your machine, and ensure you have python version 3 or above installed 
-run 
+Clone this github repository to your machine, and ensure you have python version 3 or above installed.
+ Then run the following command from inside the git directory to install required python packages.
 ```
-pip3 install -r requirements.txt
+pip3* install -r requirements.txt
 
 ``` 
-from inside the directory to install required python packages
+*for purposes of this readme it will be assumed you need to add 3 to the end of python and pip commands to utilize pythonv3*
 
 ### run the following command to start the application locally
 
