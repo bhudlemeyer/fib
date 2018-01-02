@@ -3,7 +3,7 @@
 ## Running locally with python
 
 Clone this github repository to your machine, and ensure you have python version 3 or above installed.
- Then run the following command from inside the git directory to install required python packages.
+ Then run the following command from inside the project directory to install required python packages.
 ```
 pip3 install -r requirements.txt
 
@@ -22,7 +22,7 @@ This will bring the app up listening on all interfaces on port 8080
 Clone the github repository to your machine
 ensure docker is installed and running on your machine
 
-run following command to build the docker image
+run following command from within the project directory to build the docker image
 ```
 sudo docker build -t NAME_YOU_WANT_FOR_IMAGE --build-arg PORT=PORT_YOU_WANT_APP_TO_LISTEN_ON .
 
@@ -58,6 +58,16 @@ returns
 [0, 1, 1, 2, 3, 5]
 ```
 
+
+# Perform unit tests
+
+To perform unit testing of the app in a seperate window start the app via the python3 method listed above.
+
+Once the app is running from the root of the project directory simply run
+
+```
+python3 test/test_basic.py
+```
 
 
 
