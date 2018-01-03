@@ -1,0 +1,26 @@
+resources:
+- name: fib_dockerfile
+  type: git
+  source: 
+    uri: git@github.com:bhudlemeyer/fib.git
+    #uri: https://github.com/bhudlemeyer/fib.git
+    private_key: {{git-private-key}}
+    branch: master
+    paths: [Dockerfile]
+
+- name: fib_buildimage
+  type: docker-image
+  source:
+    repository: bhudlemeyer/fib
+    email: {{docker_email}}
+    username: {{docker_user}}
+    password: {{docker_pass}}
+
+jobs:
+- name: fib_build_job
+  plan:
+  - get: fib_dockerfile
+    trigger: true
+  - put: fib_buildimage
+    params: {build: fib_dockerfile}
+
