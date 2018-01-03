@@ -66,6 +66,6 @@ To perform unit testing of the app in a seperate window start the app via the py
 Once the app is running from the root of the project directory simply run
 
 ```
-python3 test/test_basic.py
+python3 tests/test_basic.py
 ```
 
