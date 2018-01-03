@@ -18,8 +18,8 @@ var
 sdist
 develop-eggs
 .installed.cfg
-lib
-lib64
+lib/
+lib64/
 
 # Installer logs
 pip-log.txt
@@ -82,3 +82,13 @@ bin/
 lib/
 lib64/
 share/
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
