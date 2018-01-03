@@ -61,7 +61,7 @@ returns
 
 
 ## If you would like to try the app without running anything locally you can access the app via the below url as well
-[http://hdev1.hudapps.net:8080/] (http://hdev1.hudapps.net:8080/)
+<http://hdev1.hudapps.net:8080/>
 
 # Perform unit tests
 
