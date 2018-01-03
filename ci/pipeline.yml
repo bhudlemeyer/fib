@@ -6,7 +6,7 @@ resources:
     #uri: https://github.com/bhudlemeyer/fib.git
     private_key: {{git-private-key}}
     branch: master
-    #paths: [Dockerfile]
+    paths: [Dockerfile,app/*.py,app/templates/*.html,app/templates/images/*.*]
 
 - name: fib_buildimage
   type: docker-image
