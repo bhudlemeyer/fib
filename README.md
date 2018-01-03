@@ -59,6 +59,10 @@ returns
 ```
 *I have set the upper limit to 1000 to avoid memory exhaustion on local machines. If you wish to override this limit edit app/main.py and modify the /vX/fib/ route settings.*
 
+
+## If you would like to try the app without running anything locally you can access the app via the below url as well
+[http://hdev1.hudapps.net:8080/] (http://hdev1.hudapps.net:8080/)
+
 # Perform unit tests
 
 To perform unit testing of the app in a seperate window start the app via the python3 method listed above.
