@@ -16,7 +16,7 @@ def fibcalc(arg):
 def main():
   return render_template('index.html')
 
-@app.route('/v1/fib/<int(min=1, max=1000):m>')
+@app.route('/v1/fib/<int(max=1000):m>')
 def fib(m):
     y = int(m)
     ftmp = fibcalc(y)
