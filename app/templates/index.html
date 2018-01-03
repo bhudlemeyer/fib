@@ -5,9 +5,10 @@
     <body>
 	    <h1><font size= "+5">Welcome to my Fibonacci app</font></h1>
         <p>To use the app, just add the number of Fibonacci numbers you want to calculate to the end of the above url. <br>
-        i.e.:  &lt;domain&gt;/v1/fib/&lt;num&gt;</p>
-        <p>where "&lt;domain&gt;" is the domain and "&lt;num&gt;" is the number of Fibonacci numbers you want to see.</p>
-        <br>
+        i.e.:  &lt;host&gt;/v1/fib/&lt;num&gt;</p>
+        <p>where "&lt;host&gt;" is the dns or ip address of host running the app and "&lt;num&gt;" is the number of Fibonacci numbers you want to see.</p>
+	<p><i>As a note there is a hard limit of 1000 to avoid memory exhaustion issues.</i> 
+	<br>
         <pr>Here are some examples:
             <ul>
                 <li><a href="/v1/fib/5">First 5 numbers</a>
