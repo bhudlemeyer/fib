@@ -1,2 +1,3 @@
 *.swp
 creds.yml
+ci/cred.yml
