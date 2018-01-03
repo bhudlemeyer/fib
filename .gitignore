@@ -1,3 +1,84 @@
 *.swp
 cred.yml
 *.bak
+*.py[cod]
+__pycache__
+
+# C extensions
+*.so
+
+# Packages
+*.egg*
+*.egg-info
+dist
+build
+eggs
+parts
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+cover/
+.coverage*
+!.coveragerc
+.tox
+nosetests.xml
+.testrepository
+.venv
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Complexity
+output/*.html
+output/*/index.html
+
+# Sphinx
+doc/build
+
+# pbr generates these
+AUTHORS
+ChangeLog
+
+# Editors
+*~
+.*.swp
+.*sw?
+*.backup
+
+# Files created by releasenotes build
+releasenotes/build
+
+# Pycharm
+.idea
+
+# pyenv
+.python-version
+
+# Temporary files
+tmp/
+
+# PIP
+.pip/
+
+# Build
+schemas/
+out/
+
+# venv
+bin/
+lib/
+lib64/
+share/
