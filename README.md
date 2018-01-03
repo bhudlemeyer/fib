@@ -57,7 +57,7 @@ curl http://10.0.5.11:8081/v1/fib/5
 returns
 [0, 1, 1, 2, 3, 5]
 ```
-*I have set the upper limit to 1000 to avoid memory exhaustion on local machines. If you wish to override this limit edit app/main.py and modify the /vX/fib/ route settings. 
+*I have set the upper limit to 1000 to avoid memory exhaustion on local machines. If you wish to override this limit edit app/main.py and modify the /vX/fib/ route settings.*
 
 # Perform unit tests
 
