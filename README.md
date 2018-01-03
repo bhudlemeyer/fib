@@ -34,6 +34,14 @@ If you do not add the --build-arg PORT= the port will default to 8080.
 ```
 sudo docker run -d --name NAME_YOU_WANT_FOR_CONTAINER -p localport:PORT_YOU_CONFIGURED_IN_BUILD_PROCESS IMAGENAME
 ```
+To run a pre-built docker image of the application with default settings you can do a pull directly from dockerhub.
+
+```
+sudo docker pull bhudlemeyer/fib
+
+sudo docker run -d --name NAME_YOU_WANT_FOR_CONTAINER -p 8080:8080 bhudlemeyer/fib
+```
+
 
 ## Using the app
 
