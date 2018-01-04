@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -20,7 +20,7 @@ def main():
 def fib(m):
     y = int(m)
     ftmp = fibcalc(y)
-    return str(ftmp)
+    return jsonify(str(ftmp))
 
 @app.errorhandler(404)
 def page_not_found(e):
