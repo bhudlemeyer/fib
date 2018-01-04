@@ -1,10 +1,21 @@
+---
+resource_types:
+- name: ansible
+  type: docker-image
+  source:
+    repository: platformengineering/concourse-ansible-resource
+
 resources:
+- name: timestamp
+  type: time
+  source: {}  
+
 - name: fib_dockerfile
   type: git
   source: 
     uri: git@github.com:bhudlemeyer/fib.git
     #uri: https://github.com/bhudlemeyer/fib.git
-    private_key: {{git-private-key}}
+    private_key: {{git-private-key-fib}}
     branch: master
     paths: [Dockerfile,app/*.py,app/templates/*.html,app/templates/images/*.*]
 
@@ -16,6 +27,19 @@ resources:
     username: {{docker_user}}
     password: {{docker_pass}}
 
+- name: ansible-playbook
+  type: git
+  source:
+    uri: git@github.com:bhudlemeyer/playbook.git
+    branch: master
+    private_key: {{git-private-key-ansible}}
+
+- name: ansible-executor
+  type: ansible
+  source:
+    private_key: {{ansible-private-key}}
+    remote_user: {{ansible-remote-user}}
+
 jobs:
 - name: fib_build_job
   plan:
@@ -23,4 +47,18 @@ jobs:
     trigger: true
   - put: fib_buildimage
     params: {build: fib_dockerfile}
+  - put: timestamp
 
+- name: redeploy dev environment with new image
+  plan:
+  - get: timestamp
+    trigger: true
+    passed: [fib_build_job]
+  - get: ansible-playbook
+  - put: ansible-executor
+    params:
+      src: "ansible-playbook"
+      inventory:
+        path: "inventory"
+        file: "hosts"
+      playbook: "deploy-fib.yml"
