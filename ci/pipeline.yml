@@ -49,7 +49,7 @@ jobs:
     params: {build: fib_dockerfile}
   - put: timestamp
 
-- name: deploy_new_image
+- name: deploy_new_image_dev
   plan:
   - get: timestamp
     trigger: true
@@ -63,3 +63,16 @@ jobs:
         file: "inventory.ini"
       playbook: "deploy-fib.yml"
 
+- name: deploy_new_image_prod
+  plan:
+  - get: timestamp
+    trigger: true
+    passed: [deploy_new_image_dev]
+  - get: ansible-playbook
+  - put: ansible-executor
+    params:
+      src: "ansible-playbook"
+      inventory:
+         path: "inventory"
+         file: "inventory.ini"
+      playbook: "deploy-fib-prod.yml"
